@@ -10,53 +10,53 @@ namespace FizzBuzz
     {
         static void Main(string[] args)
         {
-            for (int i = 1; i < 301; i++) // Run through the numbers 1 to 100
+            for (int i = 1; i < 301; i++) // Run i through the numbers 1 to 100
             {
-                string output = "";     // Start with an empty string
-                if (i % 17 != 0)        // If it's not divisible by 17 do the normal way around
+                string output = "";     // Start with an empty string, called output
+                if (i % 17 != 0)        // If i is not divisible by 17 do the normal way around
                 {
                     if (i % 3 == 0)
                     {
-                        output += "Fizz";   // If the number is divisible by 3, add "Fizz"
+                        output += "Fizz";   // If i is divisible by 3, append "Fizz" to output
                     }
                     if (i % 5 == 0)
                     {
-                        output += "Buzz";    // If the number is divisible by 5, add "Buzz"
+                        output += "Buzz";    // If i is divisible by 5, append "Buzz" to output
                     }
                     if (i % 7 == 0)
                     {
-                        output += "Bang";     // If the number is divisible by 7, add "Bang"
+                        output += "Bang";     // If i is divisible by 7, append "Bang" to output
                     }
                     if (i % 11 == 0)
                     {
-                        output = "Bong";      // If the number is divisible by 11, replace with "Bong"
+                        output = "Bong";      // If i is divisible by 11, replace output with "Bong"
                     }
                     if (i % 13 == 0)
                     {
-                        output = "Fezz" + output;   // If the number is divisible by 13, print "Fezz" and then the string, even in the 11 case
+                        output = "Fezz" + output;   // If i is divisible by 13, add "Fezz" to the start of output
                     }
                 }
                 else // If it's divisible by 17 do the reverse
                 {
                     if (i % 3 == 0)
                     {
-                        output = "Fizz" + output;   // If the number is divisible by 3, add "Fizz"
+                        output = "Fizz" + output;   // If i is divisible by 3, add "Fizz" to the start of output
                     }
                     if (i % 5 == 0)
                     {
-                        output = "Buzz" + output;    // If the number is divisible by 5, add "Buzz"
+                        output = "Buzz" + output;    // If i is divisible by 5, add "Buzz" to the start of output
                     }
                     if (i % 7 == 0)
                     {
-                        output = "Bang" + output;     // If the number is divisible by 7, add "Bang"
+                        output = "Bang" + output;     // If i is divisible by 7, add "Bang" to the start of output
                     }
                     if (i % 11 == 0)
                     {
-                        output = "Bong";      // If the number is divisible by 11, replace with "Bong"
+                        output = "Bong";      // If i is divisible by 11, replace with "Bong"
                     }
                     if (i % 13 == 0)
                     {
-                        output += "Fezz";   // If the number is divisible by 13, print "Fezz" and then the string, even in the 11 case
+                        output += "Fezz";   // If i is divisible by 13, append "Fezz"
                     }
                 }
 
