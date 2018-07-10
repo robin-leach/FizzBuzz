@@ -11,10 +11,10 @@ namespace FizzBuzz
         static void Main(string[] args)
         {
             Console.WriteLine("Enter maximum (between 1 and 1000): ");
-            string input = Console.ReadLine();
-            int MAX;
-            bool success = Int32.TryParse(input, out MAX);
-            if (success && MAX >= 1 && MAX <= 1000)
+            string input = Console.ReadLine(); // Get user input for the maximum, store it as a string called "input"
+            int MAX;                           // Set up variable for the maximum
+            bool success = Int32.TryParse(input, out MAX); // Try to convert input to an integer, and store as MAX. If this can't be done, success is FALSE.
+            if (success && MAX >= 1 && MAX <= 1000)  // If the user has given a suitable maximum, continue with the program.
             {
                 for (int i = 1; i <= MAX; i++) // Run i through the numbers 1 to 100
                 {
@@ -76,9 +76,9 @@ namespace FizzBuzz
                     }
                 }
             }
-            else
+            else // If the user hasn't given a suitable input, output an error.
             {
-                Console.WriteLine("invalid maximum");
+                Console.WriteLine("Invalid maximum. Please input an integer between 1 and 1000.");
             }
             Console.ReadLine();
         }
