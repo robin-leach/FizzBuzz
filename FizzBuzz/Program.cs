@@ -12,8 +12,9 @@ namespace FizzBuzz
         {
             Console.WriteLine("Enter maximum (between 1 and 1000): ");
             string input = Console.ReadLine();
-            int MAX = Convert.ToInt32(input);
-            if (MAX >= 1 && MAX <= 1000)
+            int MAX;
+            bool success = Int32.TryParse(input, out MAX);
+            if (success && MAX >= 1 && MAX <= 1000)
             {
                 for (int i = 1; i <= MAX; i++) // Run i through the numbers 1 to 100
                 {
@@ -77,7 +78,7 @@ namespace FizzBuzz
             }
             else
             {
-                Console.WriteLine("not in range!");
+                Console.WriteLine("invalid maximum");
             }
             Console.ReadLine();
         }
