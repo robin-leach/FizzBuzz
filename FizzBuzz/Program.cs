@@ -21,6 +21,10 @@ namespace FizzBuzz
                 {
                     output += "Buzz";    // If the number is divisible by 5, add "Buzz"
                 }
+                if (i % 7 == 0)
+                {
+                    output += "Bang";     // If the number is divisible by 7, add "Bang"
+                }
                 if(output == "")
                 {
                     Console.WriteLine(i); // If the string is still empty (i.e. not div'ble by 3 or 5) just print the number
