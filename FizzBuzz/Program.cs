@@ -10,7 +10,7 @@ namespace FizzBuzz
     {
         static void Main(string[] args)
         {
-            for (int i = 1; i < 101; i++) // Run through the numbers 1 to 100
+            for (int i = 1; i < 301; i++) // Run through the numbers 1 to 100
             {
                 string output = "";     // Start with an empty string
                 if (i % 3 == 0)
@@ -25,9 +25,17 @@ namespace FizzBuzz
                 {
                     output += "Bang";     // If the number is divisible by 7, add "Bang"
                 }
+                if (i % 11 == 0)
+                {
+                    output = "Bong";      // If the number is divisible by 11, replace with "Bong"
+                }
+                if (i % 13 == 0)
+                {
+                    output = "Fezz" + output;   // If the number is divisible by 13, print "Fezz" and then the string, even in the 11 case
+                }
                 if(output == "")
                 {
-                    Console.WriteLine(i); // If the string is still empty (i.e. not div'ble by 3 or 5) just print the number
+                    Console.WriteLine(i); // If the string is still empty just print the number
                 }
                 else
                 {
